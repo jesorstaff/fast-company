@@ -13,7 +13,7 @@ function App() {
   const handleToggleBookMark = (id) => {
      setUsers(users.map(user => {
         if (user._id === id) {
-           user.bookmark = !user.bookmark
+           return { ...user, bookmark: !user.bookmark }
         }
 
         return user;
@@ -25,8 +25,8 @@ function App() {
       <SearchStatus length={users.length} />
       <Users 
         users={users} 
-        handleDelete={handleDelete}
-        handleToggleBookMark={handleToggleBookMark}
+        onDelete={handleDelete}
+        onToggleBookMark={handleToggleBookMark}
       />
     </>
   );

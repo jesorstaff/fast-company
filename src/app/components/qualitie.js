@@ -1,12 +1,10 @@
 import React from 'react'
 
-const Qualities = ({ color, name, _id }) => {
+const Qualities = ({ color, name }) => {
 	return (
-		<>
-			<span className={"badge m-1 bg-" + color} key={_id}>
-        {name}
-      </span>
-		</>
+		<span className={"badge m-1 bg-" + color}>
+      {name}
+    </span>
 	)
 }
 

@@ -2,7 +2,6 @@ import React from 'react'
 import User from './user'
 
 const Users = ({ users, ...rest }) => {
-
   return (
     <>
       {users.length > 0 && (
@@ -20,10 +19,10 @@ const Users = ({ users, ...rest }) => {
           </thead>
           <tbody>
             {users.map((user) => (
-              <User key={user._id} user={user} {...rest} />
+              <User key={user._id} { ...user } { ...rest } />
             ))}
           </tbody>
-      </table>
+        </table>
       )}
     </>
   )

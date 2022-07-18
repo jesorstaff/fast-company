@@ -1,8 +1,10 @@
 import React from 'react'
 
-const BookMark = ({ status, id, ...rest}) => {
+const BookMark = ({ status, ...rest }) => {
 	return (
-		<><i className={status ? `bi bi-bookmark-fill` : `bi bi-bookmark`} onClick={() => { rest.handleToggleBookMark(id) }}></i></>
+		<button { ...rest }>
+			<i className={status ? `bi bi-bookmark-heart-fill` : `bi bi-bookmark`}></i>
+		</button>
 	)
 }
 
